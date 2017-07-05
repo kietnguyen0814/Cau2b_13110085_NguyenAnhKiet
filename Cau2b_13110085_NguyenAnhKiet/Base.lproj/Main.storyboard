@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,8 +22,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-CH-cad">
+                                <rect key="frame" x="0.0" y="28" width="375" height="190.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ki-4l-mES">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="190.5"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="paO-9H-Nf1">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="190.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="paO-9H-Nf1" firstAttribute="width" secondItem="1Ki-4l-mES" secondAttribute="width" id="9Ce-Gd-JNk"/>
+                                    <constraint firstItem="1Ki-4l-mES" firstAttribute="width" secondItem="Bx1-CH-cad" secondAttribute="width" multiplier="1/2" id="O03-Vz-BBc"/>
+                                    <constraint firstItem="paO-9H-Nf1" firstAttribute="height" secondItem="1Ki-4l-mES" secondAttribute="height" id="VZp-rj-mB9"/>
+                                    <constraint firstItem="1Ki-4l-mES" firstAttribute="height" secondItem="Bx1-CH-cad" secondAttribute="height" id="jXc-gX-b21"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-BU-Knw">
-                                <rect key="frame" x="8" y="218" width="359" height="80"/>
+                                <rect key="frame" x="8" y="238.5" width="359" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter link 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pj-HA-lOh">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
@@ -38,43 +56,11 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-CH-cad">
-                                <rect key="frame" x="8" y="28" width="359" height="180"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ki-4l-mES">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="oMw-ZX-tpi"/>
-                                            <constraint firstAttribute="height" constant="180" id="xeA-0O-p5H"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="paO-9H-Nf1">
-                                        <rect key="frame" x="180" y="0.0" width="179" height="180"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="179" id="OoK-hU-dae"/>
-                                            <constraint firstAttribute="height" constant="180" id="wWb-JF-dDu"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="paO-9H-Nf1" firstAttribute="leading" secondItem="1Ki-4l-mES" secondAttribute="trailing" id="7Wa-yI-j6l"/>
-                                    <constraint firstItem="1Ki-4l-mES" firstAttribute="leading" secondItem="Bx1-CH-cad" secondAttribute="leading" id="Hqe-ZT-DKv"/>
-                                    <constraint firstAttribute="trailing" secondItem="paO-9H-Nf1" secondAttribute="trailing" id="WWi-Ho-eFi"/>
-                                    <constraint firstItem="1Ki-4l-mES" firstAttribute="top" secondItem="Bx1-CH-cad" secondAttribute="top" id="YE3-sL-OcL"/>
-                                    <constraint firstAttribute="bottom" secondItem="1Ki-4l-mES" secondAttribute="bottom" id="emQ-gD-DB9"/>
-                                    <constraint firstItem="paO-9H-Nf1" firstAttribute="leading" secondItem="1Ki-4l-mES" secondAttribute="trailing" id="f6B-MW-pga"/>
-                                    <constraint firstAttribute="bottom" secondItem="paO-9H-Nf1" secondAttribute="bottom" id="jW2-vf-6GH"/>
-                                    <constraint firstAttribute="width" constant="359" id="jzE-gn-eus"/>
-                                    <constraint firstAttribute="height" constant="180" id="lNQ-hL-4ns"/>
-                                    <constraint firstItem="paO-9H-Nf1" firstAttribute="top" secondItem="Bx1-CH-cad" secondAttribute="top" id="q66-fh-GfT"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-Wu-7Qb">
-                                <rect key="frame" x="8" y="318" width="359" height="50"/>
+                                <rect key="frame" x="8" y="326" width="359" height="50"/>
                                 <color key="backgroundColor" red="0.54072225552235187" green="1" blue="0.55900722856383922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8aB-8R-jD8"/>
-                                    <constraint firstAttribute="width" constant="359" id="Rrj-ti-3kh"/>
+                                    <constraint firstAttribute="height" constant="50" id="E6o-39-y9H"/>
                                 </constraints>
                                 <state key="normal" title="Load Image"/>
                                 <connections>
@@ -84,15 +70,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pf1-Wu-7Qb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="7xO-Sq-vLA"/>
+                            <constraint firstItem="pf1-Wu-7Qb" firstAttribute="top" secondItem="JmY-BU-Knw" secondAttribute="bottom" constant="8" id="3hj-xw-gqs"/>
                             <constraint firstItem="JmY-BU-Knw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="84i-ah-R45"/>
-                            <constraint firstAttribute="trailing" secondItem="pf1-Wu-7Qb" secondAttribute="trailing" constant="8" id="8J3-ZH-XVV"/>
-                            <constraint firstItem="JmY-BU-Knw" firstAttribute="top" secondItem="Bx1-CH-cad" secondAttribute="bottom" constant="10" id="LS2-gS-2MU"/>
-                            <constraint firstItem="pf1-Wu-7Qb" firstAttribute="top" secondItem="JmY-BU-Knw" secondAttribute="bottom" constant="20" id="Mhg-F9-2qg"/>
-                            <constraint firstItem="Bx1-CH-cad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="P0V-6V-tsc"/>
+                            <constraint firstItem="Bx1-CH-cad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9J7-YL-AVM"/>
+                            <constraint firstItem="Bx1-CH-cad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9fd-eN-8ul"/>
+                            <constraint firstItem="Bx1-CH-cad" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/3.5" id="EPN-jS-Yqw"/>
+                            <constraint firstAttribute="trailing" secondItem="pf1-Wu-7Qb" secondAttribute="trailing" constant="8" id="Gl1-ex-ha7"/>
+                            <constraint firstAttribute="trailing" secondItem="Bx1-CH-cad" secondAttribute="trailing" id="HtF-c5-PmK"/>
                             <constraint firstAttribute="trailing" secondItem="JmY-BU-Knw" secondAttribute="trailing" constant="8" id="PHt-0q-5ED"/>
-                            <constraint firstItem="Bx1-CH-cad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Ro2-js-USg"/>
-                            <constraint firstAttribute="trailing" secondItem="Bx1-CH-cad" secondAttribute="trailing" constant="8" id="Tpe-Ae-BEm"/>
+                            <constraint firstItem="Bx1-CH-cad" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UDg-je-ZDE"/>
+                            <constraint firstItem="pf1-Wu-7Qb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="cLi-W8-JS3"/>
+                            <constraint firstItem="JmY-BU-Knw" firstAttribute="top" secondItem="Bx1-CH-cad" secondAttribute="bottom" constant="20" id="cam-Gq-6xw"/>
+                            <constraint firstAttribute="trailing" secondItem="JmY-BU-Knw" secondAttribute="trailing" constant="8" id="ghm-bk-Tt5"/>
+                            <constraint firstItem="JmY-BU-Knw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="iuh-M3-lak"/>
                         </constraints>
                     </view>
                     <connections>
